@@ -16,6 +16,7 @@
 		6889914B262884AF00558290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68899149262884AF00558290 /* LaunchScreen.storyboard */; };
 		68899156262884AF00558290 /* WorkoutRecorder_srcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68899155262884AF00558290 /* WorkoutRecorder_srcTests.swift */; };
 		68899161262884B000558290 /* WorkoutRecorder_srcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68899160262884B000558290 /* WorkoutRecorder_srcUITests.swift */; };
+		68899186262B1D8800558290 /* AddListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68899185262B1D8800558290 /* AddListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6889915C262884B000558290 /* WorkoutRecorder_srcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutRecorder_srcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68899160262884B000558290 /* WorkoutRecorder_srcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecorder_srcUITests.swift; sourceTree = "<group>"; };
 		68899162262884B000558290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68899185262B1D8800558290 /* AddListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				68899149262884AF00558290 /* LaunchScreen.storyboard */,
 				6889914C262884AF00558290 /* Info.plist */,
 				68899144262884AD00558290 /* WorkoutRecorder_src.xcdatamodeld */,
+				68899185262B1D8800558290 /* AddListViewController.swift */,
 			);
 			path = WorkoutRecorder_src;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68899146262884AD00558290 /* WorkoutRecorder_src.xcdatamodeld in Sources */,
+				68899186262B1D8800558290 /* AddListViewController.swift in Sources */,
 				68899140262884AD00558290 /* ViewController.swift in Sources */,
 				6889913C262884AD00558290 /* AppDelegate.swift in Sources */,
 				6889913E262884AD00558290 /* SceneDelegate.swift in Sources */,

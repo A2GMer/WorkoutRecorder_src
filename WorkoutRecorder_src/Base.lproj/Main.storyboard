@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorkoutRecorder_src" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IXM-DU-GKO">
+                                <rect key="frame" x="0.0" y="44" width="428" height="799"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IXM-DU-GKO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="F7v-cF-jjt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IXM-DU-GKO" secondAttribute="trailing" id="ZUA-Ym-gFy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IXM-DU-GKO" secondAttribute="bottom" id="uee-fm-5cv"/>
+                            <constraint firstItem="IXM-DU-GKO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yUl-AL-PDd"/>
+                        </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="add" id="aCG-pP-dNY"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="IXM-DU-GKO" id="u6W-P1-dx4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.78504672897196" y="64.794816414686835"/>
+        </scene>
+        <!--Add List View Controller-->
+        <scene sceneID="1qk-Fa-csL">
+            <objects>
+                <viewController id="3xi-8c-Jtu" customClass="AddListViewController" customModule="WorkoutRecorder_src" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N5t-nE-OAa">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ffu-3i-Weu">
+                                <rect key="frame" x="50" y="124" width="328" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCu-Xo-2y2">
+                                <rect key="frame" x="189.66666666666666" y="193" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1u-4a-kBd">
+                                <rect key="frame" x="191" y="245" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnTapped:" destination="3xi-8c-Jtu" eventType="touchUpInside" id="1JT-Bo-kTI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yWn-iM-FUU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ffu-3i-Weu" firstAttribute="top" secondItem="yWn-iM-FUU" secondAttribute="top" constant="80" id="2yV-ps-yXI"/>
+                            <constraint firstItem="eCu-Xo-2y2" firstAttribute="centerX" secondItem="Ffu-3i-Weu" secondAttribute="centerX" id="HUu-Xz-IFv"/>
+                            <constraint firstItem="q1u-4a-kBd" firstAttribute="centerX" secondItem="eCu-Xo-2y2" secondAttribute="centerX" id="bbd-ks-YUW"/>
+                            <constraint firstItem="q1u-4a-kBd" firstAttribute="width" secondItem="eCu-Xo-2y2" secondAttribute="height" multiplier="46:31" id="cR7-bW-9Wj"/>
+                            <constraint firstItem="eCu-Xo-2y2" firstAttribute="top" secondItem="Ffu-3i-Weu" secondAttribute="bottom" constant="35" id="e4i-8z-002"/>
+                            <constraint firstItem="q1u-4a-kBd" firstAttribute="top" secondItem="eCu-Xo-2y2" secondAttribute="bottom" constant="21" id="lTF-lo-n6Q"/>
+                            <constraint firstItem="Ffu-3i-Weu" firstAttribute="centerX" secondItem="N5t-nE-OAa" secondAttribute="centerX" id="lgO-jm-pH6"/>
+                            <constraint firstItem="eCu-Xo-2y2" firstAttribute="width" secondItem="Ffu-3i-Weu" secondAttribute="height" multiplier="49:34" id="rCD-Cv-D0I"/>
+                            <constraint firstItem="Ffu-3i-Weu" firstAttribute="leading" secondItem="yWn-iM-FUU" secondAttribute="leading" constant="50" id="yaT-ki-pYl"/>
+                            <constraint firstItem="yWn-iM-FUU" firstAttribute="trailing" secondItem="Ffu-3i-Weu" secondAttribute="trailing" constant="50" id="z7D-T3-bb6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nfe-Je-nde"/>
+                    <connections>
+                        <outlet property="isGood" destination="eCu-Xo-2y2" id="xSb-bK-d7W"/>
+                        <outlet property="textField" destination="Ffu-3i-Weu" id="Mug-cx-wDa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ude-O7-Met" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="65"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
