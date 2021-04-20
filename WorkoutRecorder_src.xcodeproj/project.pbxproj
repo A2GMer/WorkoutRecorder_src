@@ -17,6 +17,8 @@
 		68899156262884AF00558290 /* WorkoutRecorder_srcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68899155262884AF00558290 /* WorkoutRecorder_srcTests.swift */; };
 		68899161262884B000558290 /* WorkoutRecorder_srcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68899160262884B000558290 /* WorkoutRecorder_srcUITests.swift */; };
 		68899186262B1D8800558290 /* AddListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68899185262B1D8800558290 /* AddListViewController.swift */; };
+		68899199262F1F8300558290 /* HistoryTableViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68899197262F1F8300558290 /* HistoryTableViewCustomCell.swift */; };
+		6889919A262F1F8300558290 /* HistoryTableViewCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68899198262F1F8300558290 /* HistoryTableViewCustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		68899160262884B000558290 /* WorkoutRecorder_srcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecorder_srcUITests.swift; sourceTree = "<group>"; };
 		68899162262884B000558290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68899185262B1D8800558290 /* AddListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewController.swift; sourceTree = "<group>"; };
+		68899197262F1F8300558290 /* HistoryTableViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCustomCell.swift; sourceTree = "<group>"; };
+		68899198262F1F8300558290 /* HistoryTableViewCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				6889913B262884AD00558290 /* AppDelegate.swift */,
 				6889913D262884AD00558290 /* SceneDelegate.swift */,
 				6889913F262884AD00558290 /* ViewController.swift */,
+				68899197262F1F8300558290 /* HistoryTableViewCustomCell.swift */,
+				68899198262F1F8300558290 /* HistoryTableViewCustomCell.xib */,
 				68899141262884AD00558290 /* Main.storyboard */,
 				68899147262884AF00558290 /* Assets.xcassets */,
 				68899149262884AF00558290 /* LaunchScreen.storyboard */,
@@ -240,6 +246,7 @@
 				6889914B262884AF00558290 /* LaunchScreen.storyboard in Resources */,
 				68899148262884AF00558290 /* Assets.xcassets in Resources */,
 				68899143262884AD00558290 /* Main.storyboard in Resources */,
+				6889919A262F1F8300558290 /* HistoryTableViewCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68899199262F1F8300558290 /* HistoryTableViewCustomCell.swift in Sources */,
 				68899146262884AD00558290 /* WorkoutRecorder_src.xcdatamodeld in Sources */,
 				68899186262B1D8800558290 /* AddListViewController.swift in Sources */,
 				68899140262884AD00558290 /* ViewController.swift in Sources */,
