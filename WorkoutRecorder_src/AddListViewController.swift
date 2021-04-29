@@ -8,30 +8,41 @@
 import UIKit
 
 class AddListViewController: UIViewController {
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var isGood: UISwitch!
+    @IBOutlet weak var txt_dateTime: UITextField!
+    @IBOutlet weak var txt_part: UITextField!
+    @IBOutlet weak var txt_event_name: UITextField!
+    @IBOutlet weak var txt_weight: UITextField!
+    @IBOutlet weak var txt_rep: UITextField!
+    @IBOutlet weak var txt_set: UITextField!
     var tappedCnt: Decimal = 0
+    var dateTime: Date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // 数字のみ許容
+        self.txt_weight.keyboardType = UIKeyboardType.numberPad
+        self.txt_rep.keyboardType = UIKeyboardType.numberPad
+        self.txt_set.keyboardType = UIKeyboardType.numberPad
+        // 現在の日時を取得し、表示
+        dateTime = Date()
+        txt_dateTime?.text = DateUtils.stringFromDate(date: dateTime)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func btnTapped(_ sender: Any) {
-        
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
         let list = WorkoutHistory(context: context)
         tappedCnt += 1
         // DB格納データ取得
         list.no = NSDecimalNumber(decimal: tappedCnt)
-        list.record_date = Date()
-        list.part = "胸"
-        list.event_name = textField.text!
-        list.weight = 100
-        list.rep = 10
-        list.set = 3
+        list.record_date = dateTime
+        list.part = txt_part.text!
+        list.event_name = txt_event_name.text!
+        list.weight = Double(txt_weight.text!) ?? 0
+        list.rep = Int32(txt_rep.text!) ?? 0
+        list.set = Int32(txt_set.text!) ?? 0
         list.good = isGood.isOn
         // 保存
         (UIApplication.shared.delegate as! AppDelegate).saveContext()

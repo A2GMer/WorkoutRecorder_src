@@ -11,22 +11,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    var workHisList : [WorkoutHistory] = []
+    var workHisList: [WorkoutHistory] = []
     
     override func viewDidLoad() {
-        // デバッグ用
-        /// ==========ここから==========
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let list = WorkoutHistory(context: context)
-        list.no = NSDecimalNumber(decimal: 1)
-        list.record_date = Date()
-        list.part = "胸"
-        list.event_name = "sample"
-        list.weight = 100
-        list.rep = 10
-        list.set = 3
-        list.good = true
-        /// ==========ここまで==========
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.dataSource = self
@@ -47,11 +34,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = UITableViewCell()
         let r = workHisList[indexPath.row]
         
+        // Date型をString型に変換
+        let datetime = DateUtils.stringFromDate(date: r.record_date!)
+        
+        // 表示するデータをCSV形式にフォーマット
+        let text = datetime + "," + r.part! + "," + r.event_name! + "," + String(r.weight) + "," + String(r.rep) + "," + String(r.set) + "," + String(r.good)
+        
+        
         if r.good{
             // いいねの場合は、星マークを付与
-            cell.textLabel?.text = "⭐️" + r.event_name!
+            cell.textLabel?.text = "⭐️" + text
         } else {
-            cell.textLabel?.text = r.event_name!
+            cell.textLabel?.text = text
         }
         return cell
     }
